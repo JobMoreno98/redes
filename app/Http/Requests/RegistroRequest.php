@@ -50,7 +50,7 @@ class RegistroRequest extends FormRequest
             ],
             'numero_serie' => [
                 'nullable', 'string', 'max:100',
-                Rule::unique('registros', 'numero_serie')->ignore($registroId)->whereNull('deleted_at'),
+                //Rule::unique('registros', 'numero_serie')->ignore($registroId)->whereNull('deleted_at'),
             ],
             
             'descripcion' => 'nullable|string|max:255',
