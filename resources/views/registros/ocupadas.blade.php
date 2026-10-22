@@ -90,7 +90,6 @@
                         <table class="table table-hover align-middle text-center mb-0 rounded-4" style="min-width: 1100px;">
                             <thead class="table-primary text-dark">
                                 <tr>
-                                    <th>#</th>
                                     <th>IP</th>
                                     <th>MAC</th>
                                     <th>N° Serie</th>
@@ -99,7 +98,6 @@
                                     <th>Dependencia</th>
                                     <th>Segmento</th>
                                     <th>Tipo Dispositivo</th>
-
                                     @canany(['editar_registros', 'eliminar_registros'])
                                         <th>Acciones</th>
                                     @endcanany
@@ -108,9 +106,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($registros as $registro)
-                                    <tr>
-                                      
-                                        <td>{{ $registros->firstItem() + $loop->index }}</td>
+                                    <tr>                                    
                                         <td>{{ $registro->ip }}</td>
                                         <td>{{ $registro->mac ?? 'Pendiente' }}</td>
                                         <td>{{ $registro->numero_serie ?? 'Pendiente' }}</td>

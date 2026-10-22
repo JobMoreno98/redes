@@ -60,14 +60,6 @@
                     @enderror
                 </div>
 
-
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                        <label for="remember" class="form-check-label">Recuérdame</label>
-                    </div>
-                </div>
-
                 <div class="text-center">
                     <button type="submit" class="btn btn-success rounded-pill px-5">
                         Entrar

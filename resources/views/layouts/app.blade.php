@@ -376,7 +376,7 @@ main.index-main {
     </div>
 </header>
 
-<main class="container index-main">
+<main class="container-fluid index-main">
   <div class="w-100">@yield('content')</div>
 </main>
 
@@ -481,7 +481,7 @@ main.index-main {
 <button class="back-button" onclick="window.history.back()"><i class="bi bi-arrow-left"></i></button>
 
 <main class="with-sidebar">
-  <div class="container">@yield('content')</div>
+  <div class="container-fluid">@yield('content')</div>
 </main>
 @endif
 

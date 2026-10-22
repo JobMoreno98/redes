@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
-
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
                 $permisos = Permiso::all();
 
                 foreach ($permisos as $permiso) {
-                    Gate::define($permiso->nombre_permiso, function(Usuario $usuario) use ($permiso) {
+                    Gate::define($permiso->nombre_permiso, function (Usuario $usuario) use ($permiso) {
                         return $usuario->hasPermissionTo($permiso->nombre_permiso);
                     });
                 }

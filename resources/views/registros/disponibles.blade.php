@@ -71,7 +71,7 @@
                     <table class="table table-hover align-middle text-center mb-0 rounded-4" style="min-width: 700px;">
                         <thead class="table-primary text-dark">
                             <tr>
-                                <th>#</th>
+                                
                                 <th>Dirección IP Disponible</th>
                                 @can('crear_registros')
                                 <th>Acciones</th>
@@ -81,7 +81,9 @@
                         <tbody>
                             @foreach($disponibles as $index => $ip)
                                 <tr>
+                                    {{--  
                                     <td>{{ $index + 1 }}</td>
+                                    --}}
                                     <td>{{ $ip }}</td>
                                     
                                     @can('crear_registros')
